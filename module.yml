@@ -1,0 +1,35 @@
+name: led_blink_pattern
+version: 1.0.0
+type: module
+description: "LED blink pattern module - blinks in a 1-2-3 repeating cycle"
+
+entry:
+  init: led_blink_pattern_init
+  loop: led_blink_pattern_loop
+
+params:
+  - name: LED_PATTERN_PORT
+    kind: c_token
+    macro_const: true
+    required: true
+    description: "GPIO Port for LED (e.g. GPIOA)"
+  - name: LED_PATTERN_PIN
+    kind: c_token
+    macro_const: true
+    required: true
+    description: "GPIO Pin for LED (e.g. GPIO_PIN_5)"
+  - name: LED_PATTERN_BLINK_MS
+    kind: u32
+    macro_const: true
+    default: 200
+    description: "Duration of each blink in milliseconds"
+  - name: LED_PATTERN_GAP_MS
+    kind: u32
+    macro_const: true
+    default: 200
+    description: "Gap between blinks in milliseconds"
+  - name: LED_PATTERN_PAUSE_MS
+    kind: u32
+    macro_const: true
+    default: 1000
+    description: "Pause between pattern cycles in milliseconds"
