@@ -11,12 +11,12 @@ params:
   - name: LED_PATTERN_PORT
     kind: c_token
     macro_const: true
-    required: true
+    default: GPIOA
     description: "GPIO Port for LED (e.g. GPIOA)"
   - name: LED_PATTERN_PIN
     kind: c_token
     macro_const: true
-    required: true
+    default: GPIO_PIN_5
     description: "GPIO Pin for LED (e.g. GPIO_PIN_5)"
   - name: LED_PATTERN_BLINK_MS
     kind: u32
